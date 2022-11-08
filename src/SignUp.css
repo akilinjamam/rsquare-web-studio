@@ -68,7 +68,9 @@ body {
     line-height: 20px;
 }
 
-.right-side-form input {
+
+
+.input {
     width: 298px;
     height: 40px;
     border: 1px solid gray;
@@ -77,4 +79,31 @@ body {
     margin-top: 4px;
     margin-right: 16px;
     margin-bottom: 24px;
+}
+
+
+
+.right-side-note input {
+    margin-right: 8px;
+    margin-left: 0px;
+}
+
+.right-side-note p {
+    font-size: 12px;
+    color: black;
+    opacity: 0.5;
+
+}
+
+.signup-button {
+    width: 305px;
+    height: 48px;
+    background: rgba(99, 96, 171, 1);
+    border-radius: 4px;
+    padding: 16px 64px 16px 64px;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 63px;
 }
