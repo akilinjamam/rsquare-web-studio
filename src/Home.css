@@ -1,5 +1,10 @@
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
 .div-1 {
     margin-top: 56px;
+
 }
 
 .bg {
@@ -8,6 +13,7 @@
     padding: 16px 64px;
     border-radius: 4px;
 }
+
 
 .img-width {
     margin-top: 120px;
@@ -24,4 +30,10 @@
     opacity: 0.6;
     margin-top: 86px;
     margin-bottom: 232px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 14px;
 }
