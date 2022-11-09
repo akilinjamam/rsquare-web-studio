@@ -1,8 +1,33 @@
 import React from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from './firebase.init';
 import './Login.css'
 
 const Login = () => {
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        // loading,
+        // error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault()
+
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        signInWithEmailAndPassword(email, password)
+
+
+    }
+
+    if (user) {
+        console.log('success')
+    }
     return (
         <div className='flex'>
             <div className='left-side'>
@@ -24,13 +49,13 @@ const Login = () => {
                 </div>
 
                 <div className='right-side-form'>
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
 
                         <p>Email Address</p>
-                        <input className='input' type="text" name="" id="" />
+                        <input className='input' type="text" name="email" id="" required />
 
                         <p>Password</p>
-                        <input className='input' type="text" name="" id="" />
+                        <input className='input' type="text" name="password" id="" required />
 
                         <div className='flex justify-between'>
                             <div className='flex'>
@@ -44,6 +69,8 @@ const Login = () => {
                                 <Link to="">Forgot password ?</Link>
                             </div>
                         </div>
+
+                        <button type="submit">submit</button>
                     </form>
                 </div>
 
