@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './SignUp.css'
@@ -30,9 +30,10 @@ const SignUp = () => {
 
     }
 
-
+    const navigate = useNavigate()
     if (user) {
         console.log('user:', user)
+        navigate('/')
     }
 
 
@@ -94,6 +95,7 @@ const SignUp = () => {
                         </div>
 
                         <button type="submit" className='signup-button'>Sign Up</button>
+                        {user && <p className='text-green-600 text-sm'>successfully signup done</p>}
                     </form>
                     <p style={{ marginTop: '8px' }}>Already have an account? <Link className='text-blue-800' to="/login">Log In</Link> </p>
                 </div>

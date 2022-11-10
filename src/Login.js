@@ -6,11 +6,17 @@ import './Login.css'
 
 const Login = () => {
 
+    function hide() {
+
+        <p>hello everyone</p>
+    }
+    const time = setTimeout(hide(), 4000)
+
     const [
         signInWithEmailAndPassword,
         user,
-        // loading,
-        // error,
+        loading,
+        error,
     ] = useSignInWithEmailAndPassword(auth);
 
     const handleSubmit = (event) => {
@@ -23,11 +29,22 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
 
 
+
+
+
     }
+
+
 
     if (user) {
         console.log('success')
     }
+
+
+    console.log(error)
+
+
+
     return (
         <div className='flex'>
             <div className='left-side'>
@@ -70,8 +87,16 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button type="submit">submit</button>
+                        <button className='signup-button' type="submit">submit</button>
                     </form>
+
+                    {error && <p id='hideItem' style={{ visibility: 'show', fontSize: '12px', color: 'red', textAlign: 'center' }}>
+
+
+                        correct password
+
+                    </p>}
+                    <p style={{ fontSize: '12px', color: 'red', textAlign: 'center' }}>{loading && 'loading....'}</p>
                 </div>
 
 

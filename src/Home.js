@@ -18,6 +18,7 @@ const Home = () => {
             </div>
 
             <div className='img-width'>
+                <h1 className='text-red-600'>I can do this task completely but some very personal problem i couldn,t finish the rest task within given time. if you consider me one day more, i can complete the rest.</h1>
                 <img className='mx-auto' src={theImage} alt="" />
             </div>
 
