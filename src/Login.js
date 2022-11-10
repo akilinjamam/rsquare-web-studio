@@ -97,6 +97,7 @@ const Login = () => {
 
                     </p>}
                     <p style={{ fontSize: '12px', color: 'red', textAlign: 'center' }}>{loading && 'loading....'}</p>
+                    <p>want to create new account! <Link className='text-blue-600' to='/signup'>signup</Link> </p>
                 </div>
 
 
